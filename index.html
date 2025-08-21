@@ -1,525 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teja | DevOps Engineer & Daytrader</title>
-  <meta name="description" content="Portfolio of Teja — DevOps Engineer & Daytrader. Cloud, automation, SRE, and trading systems." />
-  <meta property="og:title" content="Teja | DevOps Engineer & Daytrader" />
-  <meta property="og:description" content="Cloud, automation, trading systems, and performance at scale." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1220" />
-  <link rel="icon" href="assets/favicon.png" />
-  <style>
-    :root{
-      --bg:#0b1220; --bg-soft:#0f172a; --card:#131c2f; --text:#e2e8f0; --muted:#94a3b8;
-      --brand:#7dd3fc; --accent:#a78bfa; --ring:hsla(200,100%,60%,.35);
-      --maxw:1200px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; color:var(--text); background:linear-gradient(180deg,var(--bg),#0a0f1c 42%,var(--bg-soft));}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:var(--maxw);margin-inline:auto;padding:0 20px}
+<p class="muted">B.S. in Civil Engineering — June 2013 – May 2017</p>
+</div></div>
+</section>
 
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(10,15,28,.75);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(148,163,184,.15)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;gap:10px;align-items:center}
-    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 4px var(--ring)}
-    .brand h1{font-size:16px;margin:0;font-weight:600;letter-spacing:.2px}
-    .menu{display:flex;gap:18px}
-    .menu a{padding:8px 10px;border-radius:10px;color:var(--muted)}
-    .menu a:hover{background:rgba(148,163,184,.12);color:var(--text)}
-    .cta{display:flex;gap:10px}
-    .btn{padding:9px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.25);transition:transform .06s ease, background .2s}
-    .btn:hover{transform:translateY(-1px);background:rgba(148,163,184,.12)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b1220;border-color:transparent}
+<section id="certs">
+<h2>Certifications</h2>
+<div class="tags">
+<a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/3JFDXQKBG11QQTSV" target="_blank" rel="noopener">AWS Solutions Architect – Associate (2022)</a>
+<a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7924SLZJGFB41T9F" target="_blank" rel="noopener">AWS DevOps Engineer – Professional (2022)</a>
+</div>
+</section>
 
-    /* Sections */
-    section{padding:64px 0;border-top:1px solid rgba(148,163,184,.12)}
-    h2{font-size:28px;margin:0 0 18px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:18px}
-    @media(min-width:1000px){.grid.cols-2{grid-template-columns:1.15fr 1fr}}
-    @media(min-width:720px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    @media(min-width:720px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
+<div class="grid cols-2">
+<div>
+<p>Want to collaborate or hire me? Email works best. I read every message.</p>
+<p><a class="btn" href="mailto:nareddyumesh@gmail.com">nareddyumesh@gmail.com</a></p>
+<div class="social">
+<a href="https://github.com/UmeshNareddy" aria-label="GitHub">GitHub</a>
+<a href="https://www.linkedin.com/in/umesh-teja-nareddy-b75541179/" aria-label="LinkedIn">LinkedIn</a>
+<a href="#" aria-label="X / Twitter">X</a>
+</div>
+</div>
+<form class="card" onsubmit="ContactForm.submit(event)">
+<div class="body">
+<h3>Quick message</h3>
+<label class="sr-only" for="name">Name</label>
+<input id="name" name="name" placeholder="Your name" required class="input"/>
+<label class="sr-only" for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required class="input"/>
+<label class="sr-only" for="message">Message</label>
+<textarea id="message" name="message" placeholder="Tell me about your project" rows="4" required class="textarea"></textarea>
+<button class="btn primary" style="width:100%">Send</button>
+<p id="form-status" class="muted" style="margin-top:8px"></p>
+</div>
+</form>
+</div>
+</section>
+</main>
 
-    /* Hero */
-    .hero{display:grid;gap:22px;align-items:center;padding:42px 0 28px}
-    .hero h2{font-size:40px;line-height:1.15}
-    .hero .lead{font-size:18px;color:var(--muted)}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-    .badge{font-size:12px;border:1px solid rgba(148,163,184,.25);padding:6px 10px;border-radius:999px;color:var(--muted)}
+<!-- Footer -->
+<footer>
+<div class="container footer">
+<p>© <span id="year"></span> Umesh Teja Nareddy. All rights reserved.</p>
+<p class="muted">Built with plain HTML/CSS/JS. Deployed on GitHub Pages.</p>
+</div>
+</footer>
 
-    /* Cards */
-    .card{background:linear-gradient(180deg,var(--card),#0f1628);border:1px solid rgba(148,163,184,.15);border-radius:16px;overflow:hidden}
-    .card .body{padding:16px}
-    .card h3{margin:0 0 6px;font-size:18px}
-    .card p{margin:0;color:var(--muted)}
-    .pill{font-size:11px;color:#0b1220;background:linear-gradient(135deg,var(--brand),var(--accent));padding:4px 8px;border-radius:999px;font-weight:600}
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image details">
+<div class="frame">
+<header>
+<h3 id="lb-title">Title</h3>
+<button class="x" onclick="Lightbox.close()" aria-label="Close">Close</button>
+</header>
+<div class="content">
+<figure>
+<img id="lb-img" src="" alt="Expanded project image"/>
+<figcaption id="lb-cap" style="padding:12px 14px"></figcaption>
+</figure>
+</div>
+</div>
+</div>
 
-    /* Timeline */
-    .timeline{position:relative;margin-left:14px;padding-left:18px}
-    .timeline::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:2px;background:linear-gradient(var(--brand),var(--accent))}
-    .t-item{margin:0 0 18px}
-    .t-item h4{margin:0 0 4px;font-size:16px}
-    .t-item .meta{font-size:12px;color:var(--muted)}
-
-    /* Skills */
-    .tags{display:flex;flex-wrap:wrap;gap:10px}
-    .tag{padding:8px 10px;border:1px solid rgba(148,163,184,.2);border-radius:12px;background:rgba(148,163,184,.06)}
-
-    /* Gallery */
-    .gallery{display:grid;gap:12px}
-    @media(min-width:820px){.gallery{grid-template-columns:repeat(12,1fr)}}
-    .shot{position:relative;overflow:hidden;border-radius:14px;border:1px solid rgba(148,163,184,.15);background:#0d1527}
-    .shot img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;aspect-ratio:16/10}
-    .shot:hover img{transform:scale(1.03)}
-    .shot .cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);padding:6px 10px;border-radius:10px;font-size:12px}
-
-    /* Lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
-    .lightbox.open{display:flex}
-    .lightbox .frame{max-width:min(1100px,95vw);max-height:85vh;background:#0b1220;border-radius:16px;border:1px solid rgba(148,163,184,.25);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.4)}
-    .lightbox header{position:sticky;top:0;background:#0b1220;border:0;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
-    .lightbox h3{margin:0;font-size:16px}
-    .lightbox .content{padding:0}
-    .lightbox figure{margin:0}
-    .lightbox img{width:100%;height:auto;display:block}
-    .x{border:1px solid rgba(148,163,184,.25);background:transparent;color:var(--text);border-radius:10px;padding:6px 10px}
-
-    /* Footer */
-    footer{padding:40px 0;color:var(--muted)}
-    .social{display:flex;gap:12px}
-
-    /* Utilities */
-    figure{margin:0}
-    figcaption{font-size:13px;color:var(--muted);margin-top:6px}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
-</head>
-<body>
-  <!-- 3D Canvas Background for Hero -->
-  <canvas id="scene3d" aria-hidden="true" style="position:fixed;inset:0;z-index:-1;background:#050813"></canvas>
-  <header aria-label="Main navigation">
-    <div class="container nav">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <h1>Teja</h1>
-      </div>
-      <nav class="menu" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#featured">Featured</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="cta">
-        <a class="btn" href="#contact">Hire me</a>
-        <a class="btn primary" href="assets/Teja_Resume.pdf" download>Download CV</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- Hero (over 3D) -->
-    <section class="hero" id="home" style="min-height:65vh;display:grid;align-content:center">
-      <p class="pill" aria-label="Title">DevOps • Cloud • Trading</p>
-      <h2>Interactive 3D portfolio experience.</h2>
-      <p class="lead">Drag to orbit. Scroll to explore. Click 3D tiles to open case studies.</p>
-      <div class="badges" aria-label="Highlights">
-        <span class="badge">AWS • Azure • GCP</span>
-        <span class="badge">Kubernetes • Terraform • Jenkins</span>
-        <span class="badge">Observability • SRE</span>
-        <span class="badge">Python • Bash • Java</span>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="grid cols-2">
-        <div>
-          <p>I design and operate cloud environments with a focus on cost, latency, and uptime. I’ve led migrations, built CI/CD platforms, and tuned incident response with actionable SLOs. On the trading side, I prototype strategies in Python and Pine, turning ideas into backtests and dashboards.</p>
-          <p class="muted">Open to roles where I can own end‑to‑end delivery: Infrastructure as Code, platform, reliability, and performance.</p>
-          <ul class="muted">
-            <li>99.9% uptime across multi‑AZ workloads</li>
-            <li>30+ apps migrated to cloud</li>
-            <li>40% faster deploys via pipeline automation</li>
-          </ul>
-        </div>
-        <figure class="card">
-          <img src="assets/portrait.webp" alt="Portrait of Teja" loading="lazy"/>
-          <figcaption>Based in Charlotte, working remote‑first with distributed teams.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Featured Case Study -->
-    <section id="featured">
-      <h2>Featured Case Study</h2>
-      <div class="grid cols-2">
-        <figure class="card" style="cursor:pointer" onclick="openLightbox('Platform CI/CD at scale','assets/feat_cicd.webp','Reusable pipeline templates, policy checks, progressive delivery, and per‑service environments on Kubernetes and ECS.')">
-          <img src="assets/feat_cicd.webp" alt="CI/CD system architecture diagram" loading="lazy"/>
-          <figcaption>CI/CD platform spanning EKS & ECS with GitOps.</figcaption>
-        </figure>
-        <div class="card">
-          <div class="body">
-            <h3>CI/CD Platform with Policy‑as‑Code</h3>
-            <p class="muted">Built multi‑tenant pipelines with reusable templates, OPA policy checks, ephemeral preview environments, and canary + blue/green rollouts.</p>
-            <ul>
-              <li>40% faster lead time for changes</li>
-              <li>90% reduction in manual ops during deploys</li>
-              <li>Automated SLO checks gate promotions</li>
-            </ul>
-            <a class="btn" href="#projects">See more projects</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects (with images) -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid cols-3">
-        <article class="card" style="cursor:pointer" onclick="openLightbox('Kubernetes Cost Guard','assets/project_cost.webp','Rightsizing, HPA/VPA policies, and usage heatmaps to cut cluster spend by 28%.')">
-          <img src="assets/project_cost.webp" alt="Kubernetes cost dashboard" loading="lazy"/>
-          <div class="body">
-            <h3>Kubernetes Cost Guard</h3>
-            <p>Rightsizing and autoscaling with metrics‑driven policies to cut cluster spend by 28%.</p>
-          </div>
-        </article>
-        <article class="card" style="cursor:pointer" onclick="openLightbox('Observability Hub','assets/project_observability.webp','Unified logs, metrics, and traces with SLO dashboards and alert routing.')">
-          <img src="assets/project_observability.webp" alt="Observability dashboards with metrics and traces" loading="lazy"/>
-          <div class="body">
-            <h3>Observability Hub</h3>
-            <p>Unified logs, metrics, and traces; SLO reporting and alert routing reduced MTTR by 35%.</p>
-          </div>
-        </article>
-        <article class="card" style="cursor:pointer" onclick="openLightbox('Intraday Strategy Lab','assets/project_trade.webp','Event‑driven backtests, risk limits, and live dashboards for PnL & drawdown.')">
-          <img src="assets/project_trade.webp" alt="Trading backtest chart" loading="lazy"/>
-          <div class="body">
-            <h3>Intraday Strategy Lab</h3>
-            <p>Python/Pandas backtests with event‑driven execution and risk limits; live PnL and drawdown views.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <h4>Senior DevOps Engineer • Evolve It</h4>
-          <div class="meta">2022 — Present</div>
-          <p class="muted">Designed secure AWS/Azure landing zones, built Terraform modules, and implemented progressive delivery with GitOps.</p>
-        </div>
-        <div class="t-item">
-          <h4>DevOps Engineer • Princess Cruises</h4>
-          <div class="meta">2020 — 2022</div>
-          <p class="muted">Migrated monoliths to containers, optimized observability, and reduced MTTR with clear SLOs and runbooks.</p>
-        </div>
-        <div class="t-item">
-          <h4>Python Automation • Various</h4>
-          <div class="meta">2018 — 2020</div>
-          <p class="muted">Automation scripts, ETL, and tooling for platform teams and trading experiments.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="tags">
-        <span class="tag">Terraform</span>
-        <span class="tag">Kubernetes (EKS/AKS)</span>
-        <span class="tag">Jenkins • GitHub Actions</span>
-        <span class="tag">Docker • Helm</span>
-        <span class="tag">AWS • Azure • GCP</span>
-        <span class="tag">Linux • Networking</span>
-        <span class="tag">Prometheus • Grafana • ELK</span>
-        <span class="tag">Python • Bash • Java</span>
-        <span class="tag">Cost Optimization</span>
-        <span class="tag">Security • IAM • KMS</span>
-      </div>
-    </section>
-
-    <!-- Image Gallery / Screenshots -->
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <!-- 12-col responsive layout -->
-        <a class="shot" style="grid-column:span 6" onclick="openLightbox('Deploy Dashboard','assets/gal_deploy.webp','Canary rollout timeline with error‑budget guardrails.')">
-          <img src="assets/gal_deploy.webp" alt="Deploy dashboard showing canary rollout" loading="lazy"/>
-          <span class="cap">Deploy dashboard</span>
-        </a>
-        <a class="shot" style="grid-column:span 3" onclick="openLightbox('K8s Heatmap','assets/gal_heatmap.webp','Workload utilization heatmap for rightsizing decisions.')">
-          <img src="assets/gal_heatmap.webp" alt="Kubernetes utilization heatmap" loading="lazy"/>
-          <span class="cap">K8s heatmap</span>
-        </a>
-        <a class="shot" style="grid-column:span 3" onclick="openLightbox('Trading PnL','assets/gal_pnl.webp','Live PnL and drawdown tracking for intraday strategy.')">
-          <img src="assets/gal_pnl.webp" alt="Trading PnL line chart" loading="lazy"/>
-          <span class="cap">Trading PnL</span>
-        </a>
-        <a class="shot" style="grid-column:span 4" onclick="openLightbox('SLO Report','assets/gal_slo.webp','Weekly SLO compliance report by service and region.')">
-          <img src="assets/gal_slo.webp" alt="SLO compliance report" loading="lazy"/>
-          <span class="cap">SLO report</span>
-        </a>
-        <a class="shot" style="grid-column:span 4" onclick="openLightbox('Infra Diagram','assets/gal_arch.webp','Multi‑AZ architecture diagram with managed services and caching.')">
-          <img src="assets/gal_arch.webp" alt="Infrastructure architecture diagram" loading="lazy"/>
-          <span class="cap">Infra diagram</span>
-        </a>
-        <a class="shot" style="grid-column:span 4" onclick="openLightbox('Loki Logs','assets/gal_logs.webp','Centralized logs with query examples and saved views.')">
-          <img src="assets/gal_logs.webp" alt="Centralized log search UI" loading="lazy"/>
-          <span class="cap">Centralized logs</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="grid cols-2">
-        <div>
-          <p>Want to collaborate or hire me? Email works best. I read every message.</p>
-          <p><a class="btn" href="mailto:teja@example.com">teja@example.com</a></p>
-          <div class="social">
-            <a href="#" aria-label="GitHub">GitHub</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" aria-label="X / Twitter">X</a>
-          </div>
-        </div>
-        <form class="card" onsubmit="submitContact(event)">
-          <div class="body">
-            <h3>Quick message</h3>
-            <label class="sr-only" for="name">Name</label>
-            <input id="name" name="name" placeholder="Your name" required style="width:100%;margin:8px 0;padding:12px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:#0c1426;color:var(--text)"/>
-            <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;margin:8px 0;padding:12px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:#0c1426;color:var(--text)"/>
-            <label class="sr-only" for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project" rows="4" required style="width:100%;margin:8px 0;padding:12px;border-radius:10px;border:1px solid rgba(148,163,184,.25);background:#0c1426;color:var(--text)"></textarea>
-            <button class="btn primary" style="width:100%">Send</button>
-            <p id="form-status" class="muted" style="margin-top:8px"></p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <p>© <span id="year"></span> Teja. All rights reserved.</p>
-      <p class="muted">Built with plain HTML/CSS/JS. Deployed on your platform of choice.</p>
-    </div>
-  </footer>
-
-  <!-- Lightbox Modal -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image details">
-    <div class="frame">
-      <header>
-        <h3 id="lb-title">Title</h3>
-        <button class="x" onclick="closeLightbox()" aria-label="Close">Close</button>
-      </header>
-      <div class="content">
-        <figure>
-          <img id="lb-img" src="" alt="Expanded project image"/>
-          <figcaption id="lb-cap" style="padding:12px 14px"></figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // year stamp
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Contact mailto handler
-    function submitContact(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Website inquiry from ' + name);
-      const body = encodeURIComponent(msg + '
-
-From: ' + name + ' <' + email + '>');
-      window.location.href = `mailto:teja@example.com?subject=${subject}&body=${body}`;
-      document.getElementById('form-status').textContent = 'Opening your email app…';
-    }
-
-    // Lightbox
-    const lb = document.getElementById('lightbox');
-    function openLightbox(title, src, cap){
-      document.getElementById('lb-title').textContent = title;
-      const img = document.getElementById('lb-img');
-      img.src = src; img.alt = title;
-      document.getElementById('lb-cap').textContent = cap || '';
-      lb.classList.add('open');
-    }
-    function closeLightbox(){ lb.classList.remove('open'); }
-    lb?.addEventListener('click', (e)=>{ if(e.target === lb){ closeLightbox(); } });
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ closeLightbox(); }});
-
-    // ================================
-    // Three.js 3D Scene for the Hero
-    // ================================
-    const canvas = document.getElementById('scene3d');
-    let renderer, scene, camera, controls, raycaster, mouse;
-    const clickable = [];
-
-    function init3D(){
-      renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      resize();
-
-      scene = new THREE.Scene();
-
-      camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 0.1, 200);
-      camera.position.set(0, 1.6, 6);
-
-      controls = new THREE.OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.minDistance = 3; controls.maxDistance = 12;
-
-      // Lights
-      const hemi = new THREE.HemisphereLight(0xffffff, 0x0b1220, 0.8);
-      scene.add(hemi);
-      const dir = new THREE.DirectionalLight(0xffffff, 0.8);
-      dir.position.set(5,6,4);
-      scene.add(dir);
-
-      // Backdrop particles
-      const geo = new THREE.BufferGeometry();
-      const count = 500;
-      const positions = new Float32Array(count*3);
-      for(let i=0;i<count;i++){
-        positions[i*3+0] = (Math.random()-0.5)*60;
-        positions[i*3+1] = (Math.random()-0.5)*40;
-        positions[i*3+2] = -10 - Math.random()*40;
-      }
-      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      const mat = new THREE.PointsMaterial({ size:0.05, color:0x7dd3fc });
-      const stars = new THREE.Points(geo, mat);
-      scene.add(stars);
-
-      // 3D title card
-      const title = makeGlassPanel(2.8, 1.2, 'Teja — DevOps & Trading');
-      title.position.set(0, 0.9, 0);
-      scene.add(title);
-
-      // Project tiles (image planes)
-      const tiles = [
-        {img:'assets/project_cost.webp', title:'Kubernetes Cost Guard', cap:'Rightsizing & autoscaling (‑28% cost)'},
-        {img:'assets/project_observability.webp', title:'Observability Hub', cap:'Unified logs/metrics/traces (‑35% MTTR)'},
-        {img:'assets/project_trade.webp', title:'Intraday Strategy Lab', cap:'Event‑driven backtests & live PnL'}
-      ];
-      const texLoader = new THREE.TextureLoader();
-      tiles.forEach((t, i)=>{
-        const tex = texLoader.load(t.img);
-        const planeGeo = new THREE.PlaneGeometry(1.9, 1.1);
-        const planeMat = new THREE.MeshStandardMaterial({ map: tex, roughness:0.9, metalness:0.1 });
-        const plane = new THREE.Mesh(planeGeo, planeMat);
-        plane.position.set((i-1)*2.2, -0.2, 0);
-        plane.rotation.y = (i-1)*0.2;
-        plane.userData = t;
-        scene.add(plane);
-        clickable.push(plane);
-        // subtle floating
-        plane.userData.floatPhase = Math.random()*Math.PI*2;
-      });
-
-      raycaster = new THREE.Raycaster();
-      mouse = new THREE.Vector2();
-      window.addEventListener('pointermove', onPointerMove);
-      window.addEventListener('click', onClick);
-      window.addEventListener('resize', resize);
-
-      animate();
-    }
-
-    function makeGlassPanel(w,h,text){
-      const group = new THREE.Group();
-      const geo = new THREE.RoundedBoxGeometry(w, h, 0.05, 6, 0.12);
-      // Fallback if RoundedBoxGeometry not present
-      const meshGeo = geo.isBufferGeometry ? geo : new THREE.BoxGeometry(w,h,0.05);
-      const mat = new THREE.MeshPhysicalMaterial({
-        color:0x0e172a, roughness:0.2, metalness:0.0, transmission:0.6, thickness:0.4, transparent:true
-      });
-      const panel = new THREE.Mesh(meshGeo, mat);
-      group.add(panel);
-
-      // Title as texture using canvas2D
-      const t = makeTextTexture(text, 540, 200);
-      const tMat = new THREE.MeshBasicMaterial({ map: t, transparent:true });
-      const tMesh = new THREE.Mesh(new THREE.PlaneGeometry(w*0.95, h*0.5), tMat);
-      tMesh.position.set(0,0,0.03);
-      group.add(tMesh);
-      return group;
-    }
-
-    function makeTextTexture(text, w, h){
-      const c = document.createElement('canvas');
-      c.width = w; c.height = h;
-      const ctx = c.getContext('2d');
-      ctx.fillStyle = '#0b1220'; ctx.globalAlpha = 0; ctx.fillRect(0,0,w,h); ctx.globalAlpha = 1;
-      ctx.font = 'bold 34px system-ui, -apple-system, Segoe UI, Roboto';
-      ctx.fillStyle = '#e2e8f0';
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(text, w/2, h/2);
-      const tex = new THREE.CanvasTexture(c);
-      tex.anisotropy = 8; tex.needsUpdate = true;
-      return tex;
-    }
-
-    function onPointerMove(e){
-      const rect = renderer.domElement.getBoundingClientRect();
-      mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-      mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-    }
-
-    function onClick(){
-      raycaster.setFromCamera(mouse, camera);
-      const hits = raycaster.intersectObjects(clickable);
-      if(hits.length){
-        const { title, img, cap } = hits[0].object.userData || {};
-        if(img){ openLightbox(title||'Project', img, cap||''); }
-      }
-    }
-
-    function animate(){
-      requestAnimationFrame(animate);
-      controls.update();
-      // float tiles
-      clickable.forEach((m)=>{
-        m.position.y = -0.2 + Math.sin(performance.now()/1000 + m.userData.floatPhase)*0.03;
-      });
-      renderer.render(scene, camera);
-    }
-
-    function resize(){
-      const w = window.innerWidth; const h = window.innerHeight;
-      renderer?.setSize(w,h,false);
-      if(camera){ camera.aspect = w/h; camera.updateProjectionMatrix(); }
-    }
-
-    // Polyfill RoundedBoxGeometry if missing
-    (function(){
-      if(THREE.RoundedBoxGeometry) return;
-      // minimal shim: alias to BoxGeometry
-      THREE.RoundedBoxGeometry = function(w,h,d){ return new THREE.BoxGeometry(w,h,d); };
-    })();
-
-    try{ init3D(); }catch(err){
-      console.warn('WebGL init failed', err);
-      canvas.style.display = 'none';
-    }
-  </script>
+<!-- App scripts -->
+<script src="js/main.js"></script>
 </body>
 </html>
