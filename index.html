@@ -1,71 +1,387 @@
 <!DOCTYPE html>
-<p class="muted">B.S. in Civil Engineering — June 2013 – May 2017</p>
-</div></div>
-</section>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umesh Teja Nareddy | DevOps Engineer & Daytrader</title>
+  <meta name="description" content="Portfolio of Umesh Teja Nareddy — DevOps Engineer & Daytrader. Cloud, automation, SRE, trading systems, and case studies with measurable impact." />
+  <meta property="og:title" content="Umesh Teja Nareddy | DevOps Engineer & Daytrader" />
+  <meta property="og:description" content="Cloud, automation, trading systems, and performance at scale." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="assets/favicon.png" />
 
-<section id="certs">
-<h2>Certifications</h2>
-<div class="tags">
-<a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/3JFDXQKBG11QQTSV" target="_blank" rel="noopener">AWS Solutions Architect – Associate (2022)</a>
-<a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7924SLZJGFB41T9F" target="_blank" rel="noopener">AWS DevOps Engineer – Professional (2022)</a>
-</div>
-</section>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Contact -->
-<section id="contact">
-<h2>Contact</h2>
-<div class="grid cols-2">
-<div>
-<p>Want to collaborate or hire me? Email works best. I read every message.</p>
-<p><a class="btn" href="mailto:nareddyumesh@gmail.com">nareddyumesh@gmail.com</a></p>
-<div class="social">
-<a href="https://github.com/UmeshNareddy" aria-label="GitHub">GitHub</a>
-<a href="https://www.linkedin.com/in/umesh-teja-nareddy-b75541179/" aria-label="LinkedIn">LinkedIn</a>
-<a href="#" aria-label="X / Twitter">X</a>
-</div>
-</div>
-<form class="card" onsubmit="ContactForm.submit(event)">
-<div class="body">
-<h3>Quick message</h3>
-<label class="sr-only" for="name">Name</label>
-<input id="name" name="name" placeholder="Your name" required class="input"/>
-<label class="sr-only" for="email">Email</label>
-<input id="email" name="email" type="email" placeholder="you@example.com" required class="input"/>
-<label class="sr-only" for="message">Message</label>
-<textarea id="message" name="message" placeholder="Tell me about your project" rows="4" required class="textarea"></textarea>
-<button class="btn primary" style="width:100%">Send</button>
-<p id="form-status" class="muted" style="margin-top:8px"></p>
-</div>
-</form>
-</div>
-</section>
-</main>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 
-<!-- Footer -->
-<footer>
-<div class="container footer">
-<p>© <span id="year"></span> Umesh Teja Nareddy. All rights reserved.</p>
-<p class="muted">Built with plain HTML/CSS/JS. Deployed on GitHub Pages.</p>
-</div>
-</footer>
+  <!-- Vendor scripts (pinned) -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+  <!-- 3D Canvas (background) -->
+  <canvas id="scene3d" aria-hidden="true" class="bg-canvas"></canvas>
 
-<!-- Lightbox Modal -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image details">
-<div class="frame">
-<header>
-<h3 id="lb-title">Title</h3>
-<button class="x" onclick="Lightbox.close()" aria-label="Close">Close</button>
-</header>
-<div class="content">
-<figure>
-<img id="lb-img" src="" alt="Expanded project image"/>
-<figcaption id="lb-cap" style="padding:12px 14px"></figcaption>
-</figure>
-</div>
-</div>
-</div>
+  <!-- Header -->
+  <header aria-label="Main navigation">
+    <div class="container nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Umesh Teja Nareddy</h1>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta">
+        <a class="btn" href="#contact">Hire me</a>
+        <a class="btn primary" href="assets/Umesh_Teja_Nareddy_Resume.pdf" download>Download CV</a>
+      </div>
+    </div>
+  </header>
 
-<!-- App scripts -->
-<script src="js/main.js"></script>
+  <!-- Main -->
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <p class="pill" aria-label="Title">DevOps • Cloud • Trading</p>
+      <h2>DevOps platforms and trading systems with measurable impact.</h2>
+      <p class="lead">I build cloud foundations, ship reliable software faster, and prototype data‑driven trading ideas. Scroll for detailed case studies, KPIs, and the exact stack I use.</p>
+      <div class="badges" aria-label="Highlights">
+        <span class="badge">AWS • Kubernetes • Terraform</span>
+        <span class="badge">GitOps • ArgoCD • Jenkins</span>
+        <span class="badge">Observability • SLOs • SecOps</span>
+        <span class="badge">Python • Backtesting • PnL</span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid cols-2">
+        <div>
+          <p>I design and operate cloud environments with a focus on cost, latency, and uptime. I’ve led migrations, built CI/CD platforms, and tuned incident response with actionable SLOs. On the trading side, I prototype strategies in Python and Pine, turning ideas into backtests and dashboards.</p>
+          <div class="kpis">
+            <div class="kpi"><div class="kpi-num">99.9%</div><div class="kpi-cap">Uptime across multi‑AZ</div></div>
+            <div class="kpi"><div class="kpi-num">30+</div><div class="kpi-cap">Apps migrated</div></div>
+            <div class="kpi"><div class="kpi-num">40%</div><div class="kpi-cap">Faster deployments</div></div>
+            <div class="kpi"><div class="kpi-num">−35%</div><div class="kpi-cap">MTTR with SLOs</div></div>
+          </div>
+        </div>
+        <figure class="card avatar-card">
+          <div class="avatar" onclick="Lightbox.open('Umesh Teja Nareddy','assets/profile.jpg','Hi, I\'m Teja. DevOps Engineer & Daytrader.')" style="cursor:pointer">
+            <img src="assets/profile.jpg" alt="Photo of Umesh Teja Nareddy" loading="lazy"/>
+          </div>
+          <figcaption>Based in Charlotte, remote‑first.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid cols-3">
+        <div class="card"><div class="body">
+          <h3>Cloud Foundations</h3>
+          <p class="muted">Landing zones, accounts, VPCs, SSO, IAM, guardrails. IaC with Terraform/CFN.</p>
+          <ul class="muted tight">
+            <li>Multi‑account architecture</li>
+            <li>Networking & security baselines</li>
+            <li>Cost controls & tagging</li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="body">
+          <h3>Platform & CI/CD</h3>
+          <p class="muted">Pipelines, environments, GitOps, progressive delivery, policy‑as‑code.</p>
+          <ul class="muted tight">
+            <li>ArgoCD • Jenkins • GitLab CI</li>
+            <li>Blue/green & canary rollouts</li>
+            <li>Ephemeral preview envs</li>
+          </ul>
+        </div></div>
+        <div class="card"><div class="body">
+          <h3>Reliability & Observability</h3>
+          <p class="muted">SLOs, alerting, dashboards, incident response, performance tuning.</p>
+          <ul class="muted tight">
+            <li>CloudWatch • Datadog • Grafana</li>
+            <li>MTTR, error budgets, runbooks</li>
+            <li>Load testing & tuning</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="cases">
+      <h2>Case Studies</h2>
+      <div class="grid cols-2">
+        <div class="card clickable" onclick="Lightbox.open('Platform CI/CD at scale','assets/feat_cicd.webp','Reusable pipeline templates, policy checks, progressive delivery, per‑service environments on K8s & ECS.')">
+          <img src="assets/feat_cicd.webp" alt="CI/CD system architecture diagram" loading="lazy"/>
+          <div class="body">
+            <h3>CI/CD Platform with Policy‑as‑Code</h3>
+            <p class="muted">Multi‑tenant pipelines, OPA checks, GitOps deployments, automated SLO gates.</p>
+            <table class="table">
+              <tr><th>Lead time</th><td>−40%</td></tr>
+              <tr><th>Manual steps</th><td>−90%</td></tr>
+              <tr><th>Change failure</th><td>−18%</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="body">
+            <h3>Kubernetes Cost Guard</h3>
+            <p class="muted">Rightsizing, HPA/VPA policies, and usage heatmaps to cut cluster spend.</p>
+            <ul class="muted">
+              <li>Autoscaling tuned per workload SLO</li>
+              <li>Spot & Graviton adoption where safe</li>
+              <li>Chargeback dashboards by team</li>
+            </ul>
+            <div class="statline">
+              <div class="stat"><strong>−28%</strong><span>Cluster cost</span></div>
+              <div class="stat"><strong>+22%</strong><span>Node utilization</span></div>
+              <div class="stat"><strong>0</strong><span>Regressions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card clickable" onclick="Lightbox.open('Kubernetes Cost Guard','assets/project_cost.webp','Rightsizing, HPA/VPA policies, and usage heatmaps to cut cluster spend by 28%.')">
+          <img src="assets/project_cost.webp" alt="Kubernetes cost dashboard" loading="lazy"/>
+          <div class="body">
+            <h3>Kubernetes Cost Guard</h3>
+            <p>Policies & telemetry to align capacity with demand.</p>
+          </div>
+        </article>
+        <article class="card clickable" onclick="Lightbox.open('Observability Hub','assets/project_observability.webp','Unified logs, metrics, and traces with SLO dashboards and alert routing.')">
+          <img src="assets/project_observability.webp" alt="Observability dashboards with metrics and traces" loading="lazy"/>
+          <div class="body">
+            <h3>Observability Hub</h3>
+            <p>Unified telemetry, service catalog, golden signals, SLOs.</p>
+          </div>
+        </article>
+        <article class="card clickable" onclick="Lightbox.open('Intraday Strategy Lab','assets/project_trade.webp','Event‑driven backtests, risk limits, and live dashboards for PnL & drawdown.')">
+          <img src="assets/project_trade.webp" alt="Trading backtest chart" loading="lazy"/>
+          <div class="body">
+            <h3>Intraday Strategy Lab</h3>
+            <p>Backtesting engine with risk & execution hooks.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack">
+      <h2>Tech Stack</h2>
+      <div class="stack">
+        <div class="stack-col">
+          <h4>Cloud & Infra</h4>
+          <ul>
+            <li>AWS: EKS/ECS, EC2, RDS, S3, Lambda, IAM, VPC, Route53</li>
+            <li>Terraform, CloudFormation, CDK</li>
+            <li>Networking: ALB/NLB, WAF, Akamai CDN</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4>Delivery</h4>
+          <ul>
+            <li>GitHub, GitLab CI, Jenkins</li>
+            <li>ArgoCD, Helm, Kustomize</li>
+            <li>Blue/green, canary, progressive delivery</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4>Reliability</h4>
+          <ul>
+            <li>CloudWatch, Datadog, Prometheus, Grafana</li>
+            <li>SLOs, incident response, runbooks</li>
+            <li>Tracing, log aggregation, alert routing</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4>Trading & Data</h4>
+          <ul>
+            <li>Python (Pandas, NumPy), SQL</li>
+            <li>Event‑driven backtests, risk limits</li>
+            <li>PnL, drawdown, live dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h4>AWS / DevOps Engineer • Princess Cruises (Contract / Remote)</h4>
+          <div class="meta">July 2021 — Present</div>
+          <p class="muted">Architected AWS landing zones and cloud-native migrations for 30+ legacy apps using Terraform; built resilient multi‑AZ systems (EC2, EKS/ECS, RDS, S3, IAM, VPC) achieving 99.9% uptime with Auto Scaling, Route 53, and ELB. Led CI/CD with Jenkins, GitHub, ArgoCD to cut manual steps by 90% and speed delivery by 40%. Drove observability with CloudWatch, Datadog, Splunk, resolving 95% incidents pre‑impact. Implemented DevSecOps controls (ACM, KMS, Secrets Manager; Fortify; SOC 2, GDPR, PCI, HIPAA), reducing vulns by 40%.</p>
+        </div>
+        <div class="t-item">
+          <h4>Build & Release Engineer • NJR Infotech Pvt Ltd. (Contract / Hyderabad)</h4>
+          <div class="meta">June 2017 — December 2018</div>
+          <p class="muted">Automated build/release with Jenkins, Bitbucket, Maven, Terraform; reduced errors by 30% and sped deployments by 25%. Coordinated releases across Dev, QA, DBA using Jira/ServiceNow; scripted provisioning with Shell & Python.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="tags">
+        <span class="tag">AWS (EC2, S3, RDS, Lambda, IAM, VPC, Route53, EKS/ECS)</span>
+        <span class="tag">Terraform • CloudFormation • AWS CDK</span>
+        <span class="tag">Kubernetes • Docker • Helm • Istio</span>
+        <span class="tag">CI/CD: Jenkins • GitLab CI • ArgoCD • Maven</span>
+        <span class="tag">Observability: CloudWatch • Datadog • Splunk • Prometheus • Grafana</span>
+        <span class="tag">Security: IAM • KMS • ACM • Secrets Manager • DevSecOps</span>
+        <span class="tag">Networking: VPC • ALB/NLB • DNS • Akamai CDN/WAF</span>
+        <span class="tag">Databases: Oracle • SQL Server • PostgreSQL • MongoDB</span>
+        <span class="tag">Scripting: Python • Bash • PowerShell • JavaScript • SQL</span>
+        <span class="tag">Tools: Jira • ServiceNow • IBM API Connect</span>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <a class="shot" style="grid-column:span 6" onclick="Lightbox.open('Deploy Dashboard','assets/gal_deploy.webp','Canary rollout timeline with error‑budget guardrails.')">
+          <img src="assets/gal_deploy.webp" alt="Deploy dashboard showing canary rollout" loading="lazy"/>
+          <span class="cap">Deploy dashboard</span>
+        </a>
+        <a class="shot" style="grid-column:span 3" onclick="Lightbox.open('K8s Heatmap','assets/gal_heatmap.webp','Workload utilization heatmap for rightsizing decisions.')">
+          <img src="assets/gal_heatmap.webp" alt="Kubernetes utilization heatmap" loading="lazy"/>
+          <span class="cap">K8s heatmap</span>
+        </a>
+        <a class="shot" style="grid-column:span 3" onclick="Lightbox.open('Trading PnL','assets/gal_pnl.webp','Live PnL and drawdown tracking for intraday strategy.')">
+          <img src="assets/gal_pnl.webp" alt="Trading PnL line chart" loading="lazy"/>
+          <span class="cap">Trading PnL</span>
+        </a>
+        <a class="shot" style="grid-column:span 4" onclick="Lightbox.open('SLO Report','assets/gal_slo.webp','Weekly SLO compliance report by service and region.')">
+          <img src="assets/gal_slo.webp" alt="SLO compliance report" loading="lazy"/>
+          <span class="cap">SLO report</span>
+        </a>
+        <a class="shot" style="grid-column:span 4" onclick="Lightbox.open('Infra Diagram','assets/gal_arch.webp','Multi‑AZ architecture diagram with managed services and caching.')">
+          <img src="assets/gal_arch.webp" alt="Infrastructure architecture diagram" loading="lazy"/>
+          <span class="cap">Infra diagram</span>
+        </a>
+        <a class="shot" style="grid-column:span 4" onclick="Lightbox.open('Loki Logs','assets/gal_logs.webp','Centralized logs with query examples and saved views.')">
+          <img src="assets/gal_logs.webp" alt="Centralized log search UI" loading="lazy"/>
+          <span class="cap">Centralized logs</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details class="faq"><summary>Do you prefer AWS or multi‑cloud?</summary><p>I’m strongest in AWS, but I design with portability in mind and have shipped on Azure and GCP when needed.</p></details>
+      <details class="faq"><summary>How do you approach reliability?</summary><p>SLOs tied to user journeys, runbooks, synthetic checks, and error‑budget burn driving incident response and rollout gates.</p></details>
+      <details class="faq"><summary>How soon can you start?</summary><p>Flexible. Contract or full‑time, remote‑first.</p></details>
+    </section>
+
+    <!-- Education & Certs -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid cols-2">
+        <div class="card"><div class="body">
+          <h3>Campbellsville University, KY</h3>
+          <p class="muted">M.S. in Computer Science — <strong>Expected Dec 2025</strong></p>
+        </div></div>
+        <div class="card"><div class="body">
+          <h3>Lawrence Technological University, MI</h3>
+          <p class="muted">M.S. in Construction Engineering Management — Jan 2019 – May 2021</p>
+        </div></div>
+      </div>
+      <div class="card" style="margin-top:12px"><div class="body">
+        <h3>SRM University, Chennai, India</h3>
+        <p class="muted">B.S. in Civil Engineering — June 2013 – May 2017</p>
+      </div></div>
+    </section>
+
+    <section id="certs">
+      <h2>Certifications</h2>
+      <div class="tags">
+        <a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/3JFDXQKBG11QQTSV" target="_blank" rel="noopener">AWS Solutions Architect – Associate (2022)</a>
+        <a class="tag" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/7924SLZJGFB41T9F" target="_blank" rel="noopener">AWS DevOps Engineer – Professional (2022)</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <div>
+          <p>Want to collaborate or hire me? Email works best. I read every message.</p>
+          <p><a class="btn" href="mailto:nareddyumesh@gmail.com">nareddyumesh@gmail.com</a></p>
+          <div class="social">
+            <a href="https://github.com/UmeshNareddy" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/umesh-teja-nareddy-b75541179/" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="X / Twitter">X</a>
+          </div>
+        </div>
+        <form class="card" onsubmit="ContactForm.submit(event)">
+          <div class="body">
+            <h3>Quick message</h3>
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required class="input"/>
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required class="input"/>
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project" rows="4" required class="textarea"></textarea>
+            <button class="btn primary" style="width:100%">Send</button>
+            <p id="form-status" class="muted" style="margin-top:8px"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer">
+      <p>© <span id="year"></span> Umesh Teja Nareddy. All rights reserved.</p>
+      <p class="muted">Built with plain HTML/CSS/JS. Deployed on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image details">
+    <div class="frame">
+      <header>
+        <h3 id="lb-title">Title</h3>
+        <button class="x" onclick="Lightbox.close()" aria-label="Close">Close</button>
+      </header>
+      <div class="content">
+        <figure>
+          <img id="lb-img" src="" alt="Expanded project image"/>
+          <figcaption id="lb-cap" style="padding:12px 14px"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- App scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>
